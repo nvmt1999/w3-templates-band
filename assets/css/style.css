@@ -21,6 +21,25 @@ p {
 img {
     width: 100%;
 }
+
+.black-background {
+    background-color: black;
+    color: white;
+}
+
+.white-background {
+    background-color: white;
+    color: black;
+}
+
+.main-content {
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none;
+}
 /* HEADER */
 
 header {
@@ -134,6 +153,8 @@ header {
 .section {
     text-align: center;
     padding: 64px 16px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .section .title {
@@ -175,11 +196,6 @@ header {
     width: 60%;
     border-radius: 3px;
     margin-bottom: 16px;
-}
-
-.section.tour {
-    background-color: black;
-    color: white;
 }
 
 .section.tour .sub-title {
@@ -276,6 +292,98 @@ button:hover {
     cursor: pointer;
 }
 
+.ticket-surrounding {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.ticket-model {
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+}
+
+.model-header {
+    position: relative;
+    background-color: #009688;
+    color: white;
+    padding: 32px 16px;
+    text-align: center;
+}
+
+.model-header span {
+    position: absolute;
+    padding: 8px 16px;
+    top: 0;
+    right: 0;
+    font-size: 24px;
+}
+
+.model-header span:hover {
+    cursor: pointer;
+    background-color: #ccc;
+    color: black;
+}
+
+.model-header-content {
+    letter-spacing: 4px;
+}
+
+.model-content {
+    padding: 0 16px;
+    background-color: white ;
+}
+
+.model-content p {
+    margin: 15px 0;
+}
+
+.model-content input {
+    padding: 8px;
+    font-size: 15px;
+    width: 100%;
+}
+
+#pay-btn {
+    margin: 16px 0;
+    padding: 16px;
+    width: 100%;
+    background-color: #009688;
+    color: white;
+}
+
+#pay-btn:hover {
+    background-color: #ccc;
+    color: black;
+}
+
+#close-btn {
+    background-color: #f44336;
+    margin: 16px 0;
+    padding: 8px 16px;
+}
+
+#close-btn:hover {
+    background-color: #ccc;
+}
+
+.fa.fa-remove {
+    margin-left: 3px;
+    font-weight: 700;
+}
+
+.model-content p:last-child {
+    float: right;
+}
+
 .contact-box {
     display: flex;
     text-align: left;
@@ -285,7 +393,6 @@ button:hover {
 .contact-info,
 .contact-message {
     flex: 50%;
-    max-width: auto;
     font-size: 18px;
 }
 
@@ -308,11 +415,11 @@ button:hover {
     padding: 8px;
     font-size: 15px;
     border: 1px solid rgba(0,0,0,0.2);
-    margin: 1px
+    margin: 1px;
 }
 
 .fan-message input {
-    width: 100%;
+    width: 99.5%;
     margin-top: 5px;
 }
 
