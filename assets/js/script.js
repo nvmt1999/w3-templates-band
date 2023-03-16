@@ -1,4 +1,4 @@
-function displaySubNavItems() {
-    const subNavItemsSelect = document.querySelector(".sub-nav-items");
-    subNavItemsSelect.classList.toggle("hidden");
+function toggleTicketModel() {
+    const modelSelect = document.querySelector(".ticket-surrounding");
+    modelSelect.classList.toggle("hidden");
 }
