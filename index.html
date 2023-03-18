@@ -16,10 +16,10 @@
     <div class="main">
         <header>
             <ul class="nav-items">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Band</a></li>
-                <li><a href="#">Tour</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a id="home" href="#">Home</a></li>
+                <li><a href="#s1">Band</a></li>
+                <li><a href="#s2">Tour</a></li>
+                <li><a href="#s3">Contact</a></li>
                 <li>
                     <a href="#">More<i class="fa fa-caret-down"></i></a>
                     <ul class="sub-nav-items">
@@ -32,6 +32,15 @@
             <div class="icon search">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
+            <div onclick="displayNav()" class="icon bar">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul class="toggle-items hidden">
+                <li><a href="#s1">Band</a></li>
+                <li><a href="#s2">Tour</a></li>
+                <li><a href="#s3">Contact</a></li>
+                <li><a href="#">Merch</a></li>
+            </ul>
         </header>
         <div class="main-content">
             <div class="slider">
@@ -42,7 +51,7 @@
             </div>
             <div class="content">
                 <div class="white-background">
-                    <div class="section band">
+                    <div id="s1" class="section band">
                         <h2 class="title">The Band</h2>
                         <p class="sub-title">We love music</p>
                         <p>We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -63,7 +72,7 @@
                     </div>
                 </div>
                 <div class="black-background">
-                    <div class="section tour">
+                    <div id="s2" class="section tour">
                         <h2 class="title">Tour dates</h2>
                         <p class="sub-title">Remember to book your tickets!</p>
                         <ul>
@@ -110,7 +119,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="ticket-surrounding hidden">
+                <div onclick="toggleTicketModel()" class="ticket-surrounding hidden">
                     <div class="ticket-model">
                         <div class="model-header">
                             <span onclick="toggleTicketModel()">×</span>
@@ -118,19 +127,19 @@
                                 <i class="fa fa-suitcase"></i> Tickets
                             </h2>
                         </div>
-                        <div class="model-content">
+                        <form class="model-content">
                             <p><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</p>
-                            <input type="text" placeholder="How many?">
+                            <input type="number" placeholder="How many?" required>
                             <p><i class="fa fa-user"></i> Send To</p>
-                            <input type="text" placeholder="Enter email">
+                            <input type="email" placeholder="Enter email" required>
                             <button id="pay-btn">PAY<i class="fa fa-check"></i></button>
                             <button onclick="toggleTicketModel()" id="close-btn">Close<i class="fa fa-remove"></i></button>
                             <p>Need <a href="#">help?</a></p>
-                        </div>
+                        </form>
                     </div>
                 </div>
                 <div class="white-background">
-                    <div class="section contact">
+                    <div id="s3" class="section contact">
                         <h2 class="title">Contact</h2>
                         <p class="sub-title">Fan? Drop a note!</p>
                         <div class="contact-box">
@@ -141,17 +150,17 @@
                                 <br>
                                 <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com
                             </div>
-                            <div class="contact-message">
+                            <form class="contact-message">
                                 <div class="fan-info">
-                                    <input type="text" placeholder="Name" required name ="Name">
-                                    <input type="text" placeholder="Email">
+                                    <input type="text" placeholder="Name" required>
+                                    <input type="email" placeholder="Email" required>
                                 </div>
                                 <div class="fan-message">
-                                    <input type="text" placeholder="Message">
+                                    <input type="text" placeholder="Message" required>
                                 </div>
-                            </div>
+                                 <button type="submit" >Send</button>
+                            </form>
                         </div>
-                        <button type="submit" >Send</button>
                     </div>
                 </div>
             </div>

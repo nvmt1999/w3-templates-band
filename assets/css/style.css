@@ -114,7 +114,7 @@ header {
     display: block;
 }
 
-.icon.search {
+.icon {
     color: white;
     float: right;
     line-height: 46px;
@@ -124,6 +124,35 @@ header {
 .icon.search:hover {
     background-color: #f44336;
     cursor: pointer;
+}
+
+.icon.bar {
+    display: none;
+}
+
+.icon.bar:hover {
+    background-color: #ccc;
+    color: black;
+    cursor: pointer;
+}
+
+.toggle-items {
+    background-color: black;
+    position: sticky;
+    /* display: none; */
+}
+
+.toggle-items li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 12px 24px;
+}
+
+.toggle-items li a:hover {
+    background-color: #ccc;
+    color: black;
 }
 
 .slider {
@@ -190,8 +219,6 @@ header {
     text-align: center;
 }
 
-.member img,
-.member img, 
 .member img {
     width: 60%;
     border-radius: 3px;
@@ -236,6 +263,12 @@ header {
     display: flex;
     flex-direction: column;
 }
+
+.ny img:hover,
+.paris img:hover,
+.sf img:hover {
+    opacity: 0.7;
+}  
 
 .tour-location .ny,
 .tour-location .paris,
@@ -299,16 +332,18 @@ button:hover {
     z-index: 2;
     width: 100%;
     height: 100%;
-    padding-top: 50px;
     background-color: rgba(0,0,0,0.4);
 }
 
 .ticket-model {
     display: flex;
     flex-direction: column;
-    width: 900px;
+    transform: translate(0, 30%);
+    width: 600px;
+    max-width: 900px;
     margin: 0 auto;
     box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+    animation: animate 0.5s;
 }
 
 .model-header {
@@ -346,10 +381,15 @@ button:hover {
     margin: 15px 0;
 }
 
+.model-content p:last-child a {
+    color: #2196F3;
+}
+
 .model-content input {
     padding: 8px;
     font-size: 15px;
     width: 100%;
+    border: 1px solid rgba(0,0,0,0.2);
 }
 
 #pay-btn {
@@ -423,10 +463,11 @@ button:hover {
     margin-top: 5px;
 }
 
-.section.contact > button {
+.contact-message > button {
     float: right;
     font-size: 15px;
     text-transform: uppercase;
+    margin-top: 16px;
 }
 
 .map {
@@ -452,4 +493,88 @@ footer p {
 
 footer p a {
     color: black;
+}
+
+/* ANIMATION */
+
+@keyframes animate {
+    from {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 576px) {
+    .icon.search {
+        display: none;
+    }
+
+    .icon.bar {
+        display: inline-block;
+    }
+
+    .nav-items li a{
+        display: none;
+    }
+
+    .nav-items li #home {
+        display: block;
+    }
+
+    .members {
+        flex-direction: column;
+    }
+
+    .member {
+        width: 100%;
+    }
+
+    .tour-location {
+        flex-direction: column;
+    }
+
+    .tour-location .ny,
+    .tour-location .paris,
+    .tour-location .sf {
+        margin: 0 0 16px;
+    }
+
+    .ticket-model {
+        margin: 0 10px;
+        width: auto !important;
+    }
+
+    .contact-box {
+        display: block;
+    }
+
+    .fan-info {
+        display: block;
+    }
+
+    .fan-info input {
+        width: 100%;
+    }
+
+    .fan-message input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .ticket-model {
+        width: 500px;
+    }
+}
+
+@media (min-width: 993px) {
+    .ticket-model{
+        width: 900px;
+    }
 }
