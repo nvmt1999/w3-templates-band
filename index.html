@@ -36,10 +36,10 @@
                 <i class="fa-solid fa-bars"></i>
             </div>
             <ul class="toggle-items hidden">
-                <li><a href="#s1">Band</a></li>
-                <li><a href="#s2">Tour</a></li>
-                <li><a href="#s3">Contact</a></li>
-                <li><a href="#">Merch</a></li>
+                <li><a onclick="afterClick()" href="#s1">Band</a></li>
+                <li><a onclick="afterClick()" href="#s2">Tour</a></li>
+                <li><a onclick="afterClick()" href="#s3">Contact</a></li>
+                <li><a onclick="afterClick()" href="#">Merch</a></li>
             </ul>
         </header>
         <div class="main-content">
@@ -129,7 +129,7 @@
                         </div>
                         <form class="model-content">
                             <p><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</p>
-                            <input type="number" placeholder="How many?" required>
+                            <input type="number" min="1" placeholder="How many?" required>
                             <p><i class="fa fa-user"></i> Send To</p>
                             <input type="email" placeholder="Enter email" required>
                             <button id="pay-btn">PAY<i class="fa fa-check"></i></button>
