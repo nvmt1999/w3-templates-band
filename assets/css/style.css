@@ -159,7 +159,20 @@ header {
 .slider {
     position: relative;
     padding-top: 50%;
+    margin-top: 46px;
+    display: none;
+}
+
+.img-1 {
     background: url("https://www.w3schools.com/w3images/la.jpg") top center /cover no-repeat;
+}
+
+.img-2 {
+    background: url("https://www.w3schools.com/w3images/ny.jpg") top center /cover no-repeat;
+}
+
+.img-3 {
+    background: url("https://www.w3schools.com/w3images/chicago.jpg") top center /cover no-repeat;
 }
 
 .slider-content {
@@ -527,6 +540,11 @@ footer p a {
 
     .nav-items li #home {
         display: block;
+    }
+
+    .slider-content h3,
+    .slider-content p {
+        display: none;
     }
 
     .members {
