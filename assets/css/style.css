@@ -45,7 +45,8 @@ img {
 header {
     height: 46px;
     background-color: black;
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     z-index: 1;
 }
@@ -338,7 +339,7 @@ button:hover {
 .ticket-model {
     display: flex;
     flex-direction: column;
-    transform: translate(0, 30%);
+    transform: translate(0, 25%);
     width: 600px;
     max-width: 900px;
     margin: 0 auto;
@@ -480,6 +481,7 @@ footer {
     padding: 64px 16px;
     text-align: center;
     font-size: 24px;
+    opacity: 0.6;
 }
 
 footer i:hover {
@@ -519,7 +521,7 @@ footer p a {
         display: inline-block;
     }
 
-    .nav-items li a{
+    .nav-items li a {
         display: none;
     }
 
@@ -562,14 +564,25 @@ footer p a {
         width: 100%;
     }
 
+    .fan-info input:first-child {
+        margin-bottom: 5px;
+    }
+
     .fan-message input {
         width: 100%;
+
     }
 }
 
 @media (max-width: 768px) {
     .ticket-model {
         width: 500px;
+    }
+}
+
+@media (min-width: 577px) {
+    .toggle-items {
+        display: none;
     }
 }
 

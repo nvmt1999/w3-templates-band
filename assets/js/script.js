@@ -10,3 +10,8 @@ function displayNav() {
     const navSelect = document.querySelector(".toggle-items");
     navSelect.classList.toggle("hidden");
 }
+
+function afterClick() {
+    const navSelect = document.querySelector(".toggle-items");
+    navSelect.classList.add("hidden");
+}
